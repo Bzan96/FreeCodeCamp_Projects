@@ -1,0 +1,20 @@
+{
+  "name": "timestamp_microservice",
+  "version": "1.0.0",
+  "description": "The first project of the APIs section on FreeCodeCamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express.js",
+    "node.js",
+    "FreeCodeCamp.org",
+    "hyperdev"
+  ],
+  "author": "Chris",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
