@@ -2,7 +2,7 @@
 I've learnt a ton by doing this and I've also gained a new kind of respect for people who make electronical calculators for advanced math. It really can't be easy doing. Anyway, I learned:
 * The most major breakthrough came through discovering eval(). I spent quite a few hours on trying to figure out how to do the calculations and in what order of operations, before one of my Google searches showed me the eval() function
 * While adding the ability to use key strokes with the calculator, I learned that in React you don't actually have to go the long way around through getCharCode(), because you can simple use "event.key" to find the keystroke.  
-** Somewhat embarassingly, I learned that you can hit the delete-button to clear the screen on a desktop calculator... Although I chose to use 'C' for "Clear" since it kinda makes more sense in my opinion - and it's my app!
+* Somewhat embarassingly, I learned that you can hit the delete-button to clear the screen on a desktop calculator... Although I chose to use 'C' for "Clear" since it kinda makes more sense in my opinion - and it's my app!
 * A lot about how to use slice() in different ways to produce different results
 * I used regex for real in a project for the first time. I've spent some time learning some more basic regular expressions, mostly to solve algorithms, but it was quite cool to make use of that knowledge in this app
 * Although I had learned how to use CSS grid before, I feel like I got to extend that knowledge a bit by doing this project
