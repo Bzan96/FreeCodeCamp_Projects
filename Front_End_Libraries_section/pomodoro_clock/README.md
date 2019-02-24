@@ -4,6 +4,7 @@
 * How to use Font Awesome icons, I had encountered them before, but hadn't really found a place where I wanted to implement them
 * That using border-radius: 100% on a button element results in a very aesthetically pleasing element
 * How to use states to automatically affect other states, without needing additional input from the user
+* I learned that in React you cannot just pause a timer using setInterval like you would in Vanilla JS. In React, setInterval needs a variabel to hold that ID, otherwise it will just restart the timer at the default value
 
 ### Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
