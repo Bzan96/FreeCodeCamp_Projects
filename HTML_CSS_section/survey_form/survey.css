@@ -1,0 +1,45 @@
+body {
+	background-color: yellow;
+	display: grid;
+	justify-content: center;
+}
+
+body > h1 {
+	text-shadow: 2px 2px 2px pink;
+	font-family: Lucida Handwriting;
+}
+
+form {
+	padding: 10px;
+}
+
+form > label {
+	font-size: 2em;
+	padding: 15px;
+	font-weight: bold;
+}
+
+#textarea {
+	margin-top: 40px;
+}
+
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+}
+
+#dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#submit {
+	background-color: black;
+	color: yellow;
+	font-size: 30px;
+	padding: 15px;
+}

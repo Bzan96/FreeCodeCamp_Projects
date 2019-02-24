@@ -1,0 +1,28 @@
+{
+	"name": "fcc-learn-npm-package-json",
+	"version": "1.0.1",
+	"description": "An npm practise project available on FreeCodeCamp.org",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"package-name": "version"
+	},
+	"engines": {
+		"node": "8.x"
+	},
+	"repository": {
+		"url": "https://glitch.com/edit/#!/hello-express"
+	},
+	"license": "Chris E., 2019",
+	"keywords": [
+		"node",
+		"glitch",
+		"express",
+		"freecodecamp",
+		"learningnpm",
+		"learningnode"
+	],
+	"author": "Chris"
+}

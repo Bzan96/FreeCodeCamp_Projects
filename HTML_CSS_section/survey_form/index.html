@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device width, initial-scale=1.0">
+		<link rel="stylesheet" href="survey.css">
+  </head>
+  
+  <body>
+    <h1 id="title">Information for stealing your passwords</h1>
+    <p id="description">This is a form in which you fill in information in order for me to have an
+         easier time to steal all your passwords.</p>
+    
+    <form id="survey-form">
+      <div>
+        <label for="name" id="name-label">Enter your name:</label><br>
+        <input type="text" name="name" placeholder="Joan Doe" id="name" required>
+			</div>
+			<div>
+        <label for="email" id="email-label">Enter your email:</label><br>
+        <input type="email" name="email" placeholder="your.email@email.com" id="email" required>
+			</div>
+			<div>
+        <label for="number" id="number-label">What is your favourite number?</label><br>
+        <input type="number" name="number" placeholder="10" id="number" min="1" max="100" required>
+      </div>
+      <!-- Uhh so apparently it didn't have to be a hidden dropdown... Oh well! -->
+      <div id="dropdown">
+          <h2>Select your continent</h2>
+          <select class="dropdown-content">
+            <option>Europe</option>
+            <option>North America</option>
+            <option>South America</option>
+            <option>Africa</option>
+            <option>Asia</option>
+            <option>Antarctica</option>
+            <option>Australia</option>
+          </select>
+        </div>
+        <h2>Choose your favourite dog race (hover me)</h2>
+        <div>
+          <label for="landseer">Landseer</label>
+          <input type="radio" name="dog" value="landseer" id="landseer" checked>
+          <label for="chihuahua">Chihuahua</label>
+          <input type="radio" name="dog" value="chihuahua" id="chihuahua">
+          <label for="pomeranian">Pomeranian</label>
+          <input type="radio" name="dog" value="pomeranian" id="pomeranian">
+        </div>
+        <div>
+          <label for="leonberger">Leonberger</label>
+          <input type="radio" name="dog" value="leonberger" id="leonberger">
+          <label for="golden retriever">Golden Retriever</label>
+          <input type="radio" name="dog" value="golden retriever" id="golden retriever">
+        </div>
+  
+        <div>
+          <h2>I am...:</h2>
+          <label for="only">The one and only</label>
+          <input type="checkbox" value="only" id="only">
+          <label for="nobody">Nobody I'd rather be</label>
+          <input type="checkbox" value="nobody" id="nobody">
+          <label for="awesome">Truly and objectively awesome</label>
+          <input type="checkbox" value="awesome" id="awesome" checked>
+        </div>
+
+      <div id="textarea">
+        <textarea rows="5" cols="40" placeholder="Is there anything else that will make it easy for me to steal your password?"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="Submit Form" id="submit">
+      </div>
+    </form>
+  </body>
+</html>

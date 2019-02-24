@@ -1,0 +1,57 @@
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, rgb(0, 138, 155), rgb(0, 255, 102) 70%)
+    }
+
+    #header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        padding: 2%;
+        background-color: rgba(3, 205, 250, 0.98)
+    }
+
+    #header-img {
+        height: 50px;
+        width: 50px;
+    }
+
+    header > nav > ul > li {
+        float: right;
+        list-style: none;
+        padding: 3px;
+        border: 1px solid #222;
+        border-radius: 10%;
+        margin-left: 3px;
+    }
+
+    header > nav > ul > li > a {
+        text-decoration: none;
+        font-size: 1.5em;
+        color: #FFF;
+    }
+
+    header > nav > ul > li > a:hover {
+        color: #000;
+    }
+
+    body {
+        height: 2000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #video {
+        margin-top: 1000px;
+        margin: 0 auto;
+    }
+
+    form {
+        margin-left: 10%;
+    }
+}
