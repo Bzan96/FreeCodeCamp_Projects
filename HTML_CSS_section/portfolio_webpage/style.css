@@ -1,0 +1,9 @@
+@media screen and (max-width: 500px) {
+
+}
+
+@media screen and (min-width: 501px) {
+    #welcome-section {
+        height: 100vh;
+    }
+}

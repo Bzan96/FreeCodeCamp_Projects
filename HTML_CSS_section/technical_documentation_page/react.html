@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Technical Documentation Page - React</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <nav id="navbar">
+            <header>A FreeCodeCamp Technical Documentation Page About React.js</header>
+            <a href="#Introduction_to_React" class="nav-link">Introduction to React</a>
+            <a href="#History_of_React" class="nav-link">History of React</a>
+            <a href="#The_Upsides_of_Using_React" class="nav-link">The Upsides of Using React</a>
+            <a href="#The_Downsides_of_Using_React" class="nav-link">The Downsides of Using React</a>
+            <a href="#Companies_That_Use_React" class="nav-link">Companies That Use React</a>
+        </nav>
+
+        <main id="main-doc">
+            <section id="Introduction_to_React" class="main-section">
+                <header>Introduction to React</header>
+                <p>React is a JavaScript library, which is often associated with Angular and Vue as the three big JavaScript Frontend frameworks, despite React technically not being a framework at all. React is also split into React Native and React.js, the former being the mobile development version, while the latter is the web development version.</p>
+                <p>React is built up of components, which is one of the most important parts to learn about React. A stateful component usually has this as the first lines of code in the class: </p>
+                <code class="codeBlock">
+                constructor(props) { <br />
+                    &nbsp;super(props) <br />
+                    &nbsp;this.state = { <br />
+                        &nbsp;&nbsp;name: "", <br />
+                        &nbsp;&nbsp;age: 18 <br />
+                    &nbsp;} <br />
+                }
+                </code>
+                <p>State is what React revolves around, but you're never allowed to redeclare a stateful object. Therefore there is commonly used function in React that reassigns a stateful object with a new value. That function is setState, and is written like so: </p>
+                <code class="codeBlock">this.setState({ name: "John", age: 25 })</code>
+                <p>Another central part of React is that each component renders into the DOM. That means that every component has to return something that can be rendered to the DOM, but not every component needs to render something. The render method usually looks somewhat like this: </p>
+                <code class="codeBlock">
+                render() { return(&lt;div&gt;&lt;/ div&gt; ) }
+                </code>
+                <p>Looking at the example above, we can see a div element being returned in the render method. That is because each component can only return <em>one thing</em>. However, we can pass along as many things as we'd like inside of that div, e.g.: </p>
+                <code class="codeBlock">
+                    &lt;div&gt;<br />
+                        &lt;h1&gt;Hello World&lt;/h1&gt;<br />
+                        &lt;p&gt;This is a hello world example.&lt;/p&gt;<br />
+                        &lt;article&gt;Some text&lt;/article&gt;<br />
+                    &lt;/div&gt;
+                </code>
+                <p>That means that if we were to try to return several elements, like the ones above, without wrapping them in a single wrapper element, we'd get an error. However, the wrapper element doesn't have to be a div, it could be anything that can contain other elements. Anyway, this would not work, despite it looking the same in this HTML document: </p>
+                <code class="codeBlock">
+                    &lt;h1&gt;Hello World&lt;/h1&gt;<br />
+                    &lt;p&gt;This is a hello world example.&lt;/p&gt;<br />
+                    &lt;article&gt;Some text&lt;/article&gt;<br />
+                </code>
+            </section>
+
+            <section id="History_of_React" class="main-section">
+                <header>History of React</header>
+                <p>React was created by Jordan Walke, a software engineer at Facebook. He was influenced by XHP, an HTML component framework for PHP. It was first deployed on Facebook's newsfeed in 2011 and later on Instagram.com in 2012.</p>
+            </section>
+
+            <section id="The_Upsides_of_Using_React" class="main-section">
+                <header>The Upsides of Using React</header>
+                <p>One of the greatest upsides of React is that it is client-side rendered. That means that the user loads the site once, and after that every interaction with the site is really smooth, since all the content of the site is already loaded. React is also great for developers. The component built system makes it easy to structure code, but it also allows for extremely easy refactoring of code, since you can simply refactor a whole component. That makes React loved by both users and developers.</p>
+            </section>
+
+            <section id="The_Downsides_of_Using_React" class="main-section">
+                <header>The Downsides of Using React</header>
+                <p>Everything isn't roses though, because there are some downsides with React. One of the downsides is managing state in a complex application. Because of that complexity, the library 'Redux' is often used alongside React to make state management easier, but React is slowly making progress towards making state management easier without Redux. If you're really doing your job well as a developer, handling state without Redux should very much be possible for you.</p>
+                <p>Another huge downside of React is actually one of its greatest upside: being client-side rendered. Facebook is ironically a prime example of why it can get bad. Facebook is actually still using React, but as Facebook has grown, aware users may have noticed that the site has become significantly slower to load over the years. That is because Facebook has grown a lot and as the site is growing, the users also has to load more data on start than before, making the initial rendering of the site a slow process.</p>
+            </section>
+
+            <section id="Companies_That_Use_React" class="main-section">
+                <header>Companies That Use React</header>
+                <p>Here follows a list of some of the companies in the world that use React today. Note: This is by no means an exhaustive list.</p>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Netflix</li>
+                    <li>BBC</li>
+                    <li>AirBNB</li>
+                    <li>Jeep</li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>
