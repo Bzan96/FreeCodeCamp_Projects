@@ -9,22 +9,60 @@
 
     <body>
         <nav id="navbar">
-            <a href="#tributePage">Tribute Page</a>
-            <a href="#surveyForm">Survey Form</a>
-            <a href="#productLandingPage">Product Landing Page</a>
-            <a href="#technicalDocumentationPage">Technical Documentation Page</a>
+            <a href="#welcome-section" onclick="changePage('welcome-section');">About Me</a>
+            <a href="#projects" onclick="changePage('projects');">Projects</a>
+            <a href="#contact" onclick="changePage('contact');">Contact</a>
         </nav>
 
         <section id="welcome-section">
-            <h1>text</h1>
+            <div>
+                <h1>Hello, my name is Chris and I'm an aspiring web developer</h1>
+                <h4>I focus on the Frontend and especially the UI part, using React.js</h4>
+            </div>
         </section>
 
         <section id="projects">
             <div class="project-tile">
                 <a href="https://github.com/Bzan96/FreeCodeCamp_Projects/tree/master/HTML_CSS_section/tribute_page" id="tributePage">Tribute Page</a>
+                <a href="https://github.com/Bzan96/FreeCodeCamp_Projects/tree/master/HTML_CSS_section/survey_form" id="surveyForm">Survey Form</a>
+                <a href="https://github.com/Bzan96/FreeCodeCamp_Projects/tree/master/HTML_CSS_section/product_landing_page" id="productLandingPage">Product Landing Page</a>
+                <a href="https://github.com/Bzan96/FreeCodeCamp_Projects/tree/master/HTML_CSS_section/technical_documentation_page" id="technicalDocumentationPage">Technical Documentation Page</a>
             </div>
         </section>
 
+        <section id="contact">
+            <button><a href="#">LinkedIn</a></button>
+            <button><a href="#">Twitter</a></button>
+            <button><a href="#">Email</a></button>
+        </section>
+
         <a href="https://github.com/Bzan96/FreeCodeCamp_Projects" target="_blank" id="profile-link">My GitHub profile</a>
+        
+        <script>
+            let ids = ["welcome-section", "projects", "contact"];
+            window.onload = function() {
+                document.getElementById(ids[0]).style.display = "flex";
+                document.getElementById(ids[1]).style.display = "none";
+                document.getElementById(ids[2]).style.display = "none";             
+            }
+
+            function changePage(id) {
+                if(id === ids[0]) {
+                    document.getElementById(ids[0]).style.display = "flex";
+                    document.getElementById(ids[1]).style.display = "none";
+                    document.getElementById(ids[2]).style.display = "none";
+                } else if(id === ids[1]) {
+                    console.log(id)
+                    document.getElementById(ids[0]).style.display = "none";
+                    document.getElementById(ids[1]).style.display = "flex";
+                    document.getElementById(ids[2]).style.display = "none";
+                } else if(id === ids[2]) {
+                    console.log(id)
+                    document.getElementById(ids[0]).style.display = "none";
+                    document.getElementById(ids[1]).style.display = "none";
+                    document.getElementById(ids[2]).style.display = "flex";
+                }
+            }            
+        </script>
     </body>
 </html>

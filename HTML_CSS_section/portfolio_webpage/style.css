@@ -1,9 +1,246 @@
-@media screen and (max-width: 500px) {
-
+* {
+    margin: 0;
+    padding: 0;
+    --darkGreen: rgb(0, 100, 0);
 }
 
-@media screen and (min-width: 501px) {
+body {
+    background-color: var(--darkGreen);
+    background: url("https://upload.wikimedia.org/wikipedia/commons/3/34/Spruce_forest_at_Holma.jpg");
+    background-size: 150%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: var(--darkGreen);
+    }
+
+    nav {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav > a {
+        border: 2px solid orange;
+        font-size: 2em;
+        font-weight: bold;
+        text-shadow: 1px 1px #000;
+        width: 100vw;
+        text-decoration: none;
+        background-color: var(--darkGreen);
+        color: #FFF;
+        text-align: center;
+    }
+
+    nav > a:hover {
+        background-color: #DDD;
+        color: #000;
+    }
+    
     #welcome-section {
         height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #welcome-section > div {
+        background-color: #EEE;
+        border: 5px ridge orange;
+    }
+    
+    #projects {
+        height: 100vh;
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .project-tile {
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    #projects .project-tile > a {
+        padding: 5px 0;
+        margin: 2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-decoration: none;
+        color: orange;
+        background-color: var(--darkGreen);
+        border: 4px ridge #FFF;
+        font-weight: bold;
+    }
+
+    #contact {
+        height: 100vh;
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #contact > button {
+        margin: 40vh 5px 0 0;
+        width: 120px;
+        height: 120px;
+        border-radius: 10px;
+        background-color: var(--darkGreen);
+        font-size: 1.2em;
+        border: none;
+        box-shadow: 0 3px #FFF;
+    }
+
+    #contact > button > a {
+        text-decoration: none;
+        color: orange;
+        font-weight: bold;
+        text-shadow: 1px 1px #000;
+    }
+
+    #contact > button > a:active {
+        background-color: #FFF;
+    }
+
+    #profile-link {
+        position: absolute;
+        padding: 0 2%;
+        bottom: 1%;
+        left: 22%;
+        text-decoration: none;
+        background-color: var(--darkGreen);
+        color: #EEE;
+        font-size: 2em;
+        border: 3px double orange;
+    }
+
+    #profile-link:hover {
+        color: #000;
+    }
+}
+
+/* 
+    Desktop
+*/
+
+@media screen and (min-width: 769px) {
+    nav {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav > a {
+        border: 2px solid orange;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-shadow: 1px 1px #000;
+        width: 100vw;
+        text-decoration: none;
+        background-color: var(--darkGreen);
+        color: #FFF;
+        text-align: center;
+    }
+
+    nav > a:hover {
+        background-color: #DDD;
+        color: #000;
+    }
+    
+    #welcome-section {
+        height: 100vh;
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #welcome-section > div {
+        background-color: #EEE;
+        border: 5px ridge orange;
+    }
+    
+    #projects {
+        height: 100vh;
+        font-size: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .project-tile {
+        margin: 0 auto;
+        width: 30%;
+    }
+
+    #projects .project-tile > a {
+        padding: 5px 0;
+        margin: 2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-decoration: none;
+        color: orange;
+        background-color: var(--darkGreen);
+        border: 4px ridge #FFF;
+    }
+
+    #projects .project-tile > a:hover {
+        background-color: #FFF;
+        color: var(--darkGreen);
+    }
+
+    #contact {
+        height: 100vh;
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #contact > button {
+        margin: 40vh 5px 0 0;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        background: linear-gradient(var(--darkGreen) 10%, #FFF 120%);
+        font-size: 2em;
+        border: none;
+        box-shadow: 0 3px #FFF;
+    }
+
+    #contact > button > a {
+        text-decoration: none;
+        color: orange;
+        font-weight: bold;
+        text-shadow: 1px 1px #000;
+    }
+
+    #profile-link {
+        position: absolute;
+        padding: 0 2%;
+        bottom: 2%;
+        left: 40%;
+        text-decoration: none;
+        background-color: var(--darkGreen);
+        color: #EEE;
+        font-size: 2em;
+        border: 3px double orange;
+    }
+
+    #profile-link:hover {
+        color: #000;
     }
 }
