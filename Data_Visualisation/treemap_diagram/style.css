@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    position: absolute;
+    top: 2vh;
+    left: 20vw;
+}
+
+svg {
+    background-color: #ffffff;
+}
+
+#title {
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#description {
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    background: linear-gradient(165deg, #ffffff, #ffffff 60%, #222222);
+    border: 10px double #730043;
+    border-radius: 10px;
+}
+
+rect:hover {
+    fill: pink;
+}

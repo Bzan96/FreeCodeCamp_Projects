@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+}
+
+svg {
+    background: radial-gradient(#222222, #ffffff);
+    /* background-color: #ffffff; */
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+    border-radius: 5px;
+    box-shadow: -10px 10px 15px 5px #444444,
+                10px 10px 15px 5px #444444,
+                -10px -10px 15px 5px #444444,
+                10px -10px 15px 5px #444444;
+    z-index: -1;
+}
+
+#tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #dddddd;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.county:hover {
+    fill: #000000;
+    stroke-width: 2px;
+    stroke: red;
+}
+
+#title {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+#description {
+    font-style: italic;
+}
+
+#legend {
+    text-decoration: underline;
+    font-size: 0.8em;
+}

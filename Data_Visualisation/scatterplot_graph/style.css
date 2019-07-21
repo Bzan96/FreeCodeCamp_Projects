@@ -1,0 +1,34 @@
+body {
+    position: absolute;
+    /* left: 30vw; */
+    left: 5px;
+    width: 80%;
+    margin: 10% auto;
+    background-color: #000;
+}
+
+#x-axis line {
+    stroke: green;
+}
+
+#y-axis line {
+    stroke: red;
+}
+
+#tooltip {
+    padding: 10px;
+    background-color: #000;
+    border-radius: 0 25px 25px 25px;
+    border: 2px solid #bbbbbb;
+    box-shadow: -10px 10px 25px 15px #bbbbbb;
+    color: #fff;
+}
+
+.dot {
+    stroke: #000;
+    stroke-width: 3;
+}
+
+.dot:hover {
+    fill: #000;
+}
