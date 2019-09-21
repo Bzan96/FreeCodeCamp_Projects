@@ -24,7 +24,6 @@ app.get("/api/hello", function (req, res) {
 });
 
 app.get("/api/whoami", (req, res, next) => {
-  console.log(req.ip.substring(0,7));
   res.json({
       "ipaddress": req.ip.substr(0, 7) === "::ffff:" ? req.ip.substr(7) : req.ip,
       "language": req.headers["accept-language"],
