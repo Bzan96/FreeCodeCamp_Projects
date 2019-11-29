@@ -1,0 +1,23 @@
+body {
+    background-color: #222222;
+    color: #eeeeee;
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+  
+  #convertField {
+    border: none;
+    height: 30px;
+    width: 200px;
+    padding-left: 10px;
+    padding-right: 100px;
+  }
+  
+  #convert {
+    height: 32px;
+    border: none;
+    width: 100px;
+    background: linear-gradient(145deg, #ffff00 30%, #FF9700);
+    color: #222222;
+    font-weight: bold;
+  }
