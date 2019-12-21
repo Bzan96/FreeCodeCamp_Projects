@@ -7,8 +7,6 @@ exports.add_message = (req, res) => {
             console.log("Error while connecting to database: " + err);
         }
 
-        console.log(req.params);
-        console.log(req.body)
         const thread = client.db("anonymous_message_board").collection("threads");
         const message = client.db("anonymous_message_board").collection("messages");
 
@@ -34,7 +32,10 @@ exports.add_message = (req, res) => {
                 message.insertOne(newReply)
                 thread.findOneAndUpdate(
                     { thread: req.body.thread_id },
-                    { $push: { replies: newReply }}
+                    {
+                        $push: { replies: newReply },
+                        $set: { bumped_on: `${currentDate}, ${currentTime}` }
+                    }
                 )
 
                 res.redirect(`/b/${req.params.board}/`)

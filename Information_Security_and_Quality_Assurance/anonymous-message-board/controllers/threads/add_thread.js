@@ -7,7 +7,6 @@ exports.add_thread = (req, res) => {
           console.log("Error while connecting to database: " + err);
         }
 
-        console.log(req.body);
         const board = client.db("anonymous_message_board").collection("boards");
         const thread = client.db("anonymous_message_board").collection("threads");
 

@@ -23,8 +23,6 @@ exports.find_threads = (req, res) => {
               if(err) {
                 console.log("Error when finding threads " + err);
               }
-              
-              console.log(innerResult);
 
               res.send(innerResult);
               client.close();
