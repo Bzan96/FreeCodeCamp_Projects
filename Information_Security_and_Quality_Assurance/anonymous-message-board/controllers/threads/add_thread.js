@@ -17,7 +17,7 @@ exports.add_thread = (req, res) => {
 
           let currentDate = new Date().toISOString().substring(0, 10);
           let currentTime = new Date().toTimeString().substring(0, 8);
-
+          
           if(result < 1) {
             board.insertOne({ board: req.body.board });
             thread.insertOne({
@@ -42,8 +42,8 @@ exports.add_thread = (req, res) => {
               delete_password: req.body.delete_password,
               replies: []
             });
-
-            res.redirect(`/b/${req.body.board}/`);        
+            
+            typeof req.body.board !== "undefined" ? res.redirect(`/b/${req.body.board}/`) : null;
             client.close();
           }
         })

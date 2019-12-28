@@ -17,29 +17,24 @@ exports.remove_message = (req, res) => {
             }
 
             if(result.delete_password === req.body.delete_password) {
-                /* message.updateOne(
+                message.updateOne(
                     { _id: ObjectId(req.body.reply_id) },
-                    { message: "[deleted]" }
-                ); */
+                    { $set: { message: "[deleted]" } }
+                );
 
                 thread.findOneAndUpdate(
-                    { _id: ObjectId(req.body.thread_id), "replies.$._id": ObjectId(req.body.reply_id) },
-                    { $set: { "replies.$.message": "[deleteasd]" }},
+                    { _id: ObjectId(req.body.thread_id), "replies._id": ObjectId(req.body.reply_id) },
+                    { $set: { "replies.$.message": "[deleted]" }},
                     (err, result) => {
                     if(err) {
-                        console.log("meh" + err);
+                        console.log("Error while updating thread message " + err);
                     }
 
-                    console.log(result);
-                    /* result.replies.forEach(reply => {
-                        if(reply._id == req.body.reply_id) {
-                            reply.message = "[deleted]";
-                        }
-                    }) */
-                })
+                    // console.log(result);
 
-                res.send("success");
-                client.close();
+                    res.send("success");
+                    client.close();
+                })
             } else {
                 res.send("incorrect password");
                 client.close();
