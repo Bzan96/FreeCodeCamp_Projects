@@ -1,4 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
+const ObjectId = require('mongodb').ObjectId;
 
 exports.add_message = (req, res) => {
     MongoClient.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true },
@@ -10,11 +11,11 @@ exports.add_message = (req, res) => {
         const thread = client.db("anonymous_message_board").collection("threads");
         const message = client.db("anonymous_message_board").collection("messages");
 
-        thread.findOne({ thread: req.body.thread_id }, (err, outerResult) => {
+        thread.findOne({ _id: ObjectId(req.body.thread_id) }, (err, outerResult) => {
             if(err) {
                 console.log("Error while seaching for thread");
             }
-
+            console.log(req.body.thread_id)
             if(outerResult < 1) {
                 res.send("Sorry, no such thread exists.")
                 client.close();
@@ -31,7 +32,7 @@ exports.add_message = (req, res) => {
 
                 message.insertOne(newReply)
                 thread.findOneAndUpdate(
-                    { thread: req.body.thread_id },
+                    { thread: ObjectId(req.body.thread_id) },
                     {
                         $push: { replies: newReply },
                         $set: { bumped_on: `${currentDate}, ${currentTime}` }

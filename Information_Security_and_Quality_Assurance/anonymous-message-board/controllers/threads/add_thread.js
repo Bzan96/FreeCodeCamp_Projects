@@ -17,11 +17,12 @@ exports.add_thread = (req, res) => {
 
           let currentDate = new Date().toISOString().substring(0, 10);
           let currentTime = new Date().toTimeString().substring(0, 8);
+          let currentBoard = typeof req.body.board !== "undefined" ? req.body.board : req.params.board;
           
           if(result < 1) {
             board.insertOne({ board: req.body.board });
             thread.insertOne({
-              board: req.body.board,
+              board: currentBoard,
               thread: req.body.text,
               created_on: `${currentDate}, ${currentTime}`,
               bumped_on: `${currentDate}, ${currentTime}`,
@@ -34,7 +35,7 @@ exports.add_thread = (req, res) => {
             client.close();
           } else {
             thread.insertOne({
-              board: req.body.board,
+              board: currentBoard,
               thread: req.body.text,
               created_on: `${currentDate}, ${currentTime}`,
               bumped_on: `${currentDate}, ${currentTime}`,
@@ -43,7 +44,7 @@ exports.add_thread = (req, res) => {
               replies: []
             });
             
-            typeof req.body.board !== "undefined" ? res.redirect(`/b/${req.body.board}/`) : null;
+            typeof req.body.board !== "undefined" ? res.redirect(`/b/${req.body.board}/`) : res.redirect(`/b/${req.params.board}/`);
             client.close();
           }
         })

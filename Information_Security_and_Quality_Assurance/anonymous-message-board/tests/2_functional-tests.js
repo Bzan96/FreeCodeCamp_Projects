@@ -18,7 +18,20 @@ suite('Functional Tests', function() {
   suite('API ROUTING FOR /api/threads/:board', function() {
     
     suite('POST', function() {
-      
+      test('Threads are successfully posted to boards', (done) => {
+        chai.request(server)
+          .post('/api/threads/general')
+          .send({
+            "text": "test thread",
+            "delete_password": "test"
+          })
+          .end((err, res) => {
+            assert.equal(res.status, 200);
+            assert.equal(res.body.text, "test thread");
+            assert.equal(res.body.delete_password, "test");
+            done();
+          })
+      })
     });
     
     suite('GET', function() {

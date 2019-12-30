@@ -7,7 +7,6 @@ exports.find_threads = (req, res) => {
           console.log("Error while connecting to database: " + err);
         }
 
-        console.log(req.params);
         const board = client.db("anonymous_message_board").collection("boards");
         const thread = client.db("anonymous_message_board").collection("threads");
 
