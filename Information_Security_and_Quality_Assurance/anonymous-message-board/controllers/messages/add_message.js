@@ -15,7 +15,7 @@ exports.add_message = (req, res) => {
             if(err) {
                 console.log("Error while seaching for thread");
             }
-            console.log(req.body.thread_id)
+            
             if(outerResult < 1) {
                 res.send("Sorry, no such thread exists.")
                 client.close();
@@ -32,7 +32,7 @@ exports.add_message = (req, res) => {
 
                 message.insertOne(newReply)
                 thread.findOneAndUpdate(
-                    { thread: ObjectId(req.body.thread_id) },
+                    { _id: ObjectId(req.body.thread_id) },
                     {
                         $push: { replies: newReply },
                         $set: { bumped_on: `${currentDate}, ${currentTime}` }
